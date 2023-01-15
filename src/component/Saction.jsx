@@ -6,16 +6,16 @@ export default () => {
       <div className="absolute top-0 left-0 w-full h-full  opacity-40"></div>
       <div className="relative z-10 gap-5 items-center lg:flex">
         <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
-          <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
+          <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl dark:text-white">
             discover and get appointment to
             <span className="text-indigo-600"> play football</span>
           </h3>
-          <p className="text-gray-500 leading-relaxed mt-3">
+          <p className="text-gray-500 leading-relaxed mt-3  dark:text-gray-300">
             Browse the dates and contact us to take the date that suits you to
             play football for you and your friends
           </p>
           <NavLink
-            className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
+            className="mt-5 px-4 py-2 text-white font-medium transition-colors duration-300  rounded-full inline-flex items-center  bg-[#00346b] hover:bg-[#002c5c]"
             to="/See_appointment"
           >
             See appointment

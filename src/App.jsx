@@ -12,6 +12,7 @@ export default () => {
   return (
     <BrowserRouter>
       <Nav />
+      
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/About" element={<About />} />

@@ -1,68 +1,124 @@
-import React from "react";
+import { LockClosedIcon } from "@heroicons/react/20/solid";
+import { React, useEffect, useState } from "react";
+import logodark from "../image/default.svg";
+export default function Example() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [data, setData] = useState([]);
 
-export default () => {
+  const handleSubmit = () => {
+    if (email.length === 0) {
+      alert("Email invalid");
+    } else if (password.length === 0) {
+      alert("Password invalid");
+    } else {
+      const find = data.find((element) => {
+        return element.Email === email && element.Password === password;
+      });
+
+      console.log(find);
+    }
+  };
+
+  useEffect(() => {
+    function Fetch() {
+      fetch("http://localhost/dashboard/projet/Login.php")
+        .then((response) => response.json())
+        .then((json) => {
+          setData(json);
+        });
+    }
+    Fetch();
+  });
   return (
-    <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
-      <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white">
-        Account settings
-      </h2>
+    <>
+      <div className="flex  items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-md space-y-8">
+          <div>
+            <img className="mx-auto h-24  " src={logodark} alt="Stadium soccor" />
+            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white ">
+              Sign in to your stadium
+            </h2>
+          </div>
 
-      <form>
-        <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
-          <div class="mb-6">
-            <label
-              for="email"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Your email
-            </label>
-            <input
-              type="email"
-              id="email"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="name@flowbite.com"
-              required
-            />
-          </div>
-          <div class="mb-6">
-            <label
-              for="password"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Your password
-            </label>
-            <input
-              type="password"
-              id="password"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              required
-            />
-          </div>
-          <div class="flex items-start mb-6">
-            <div class="flex items-center h-5">
+          <input type="hidden" name="remember" defaultValue="true" />
+          <div className="-space-y-px rounded-md shadow-sm">
+            <div>
+              <label htmlFor="email-address" className="sr-only">
+                Email address
+              </label>
               <input
-                id="remember"
-                type="checkbox"
-                value=""
-                class="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                id="email-address"
+                name="email"
+                type="email"
+                autoComplete="email"
                 required
+                className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                placeholder="Email address"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
               />
             </div>
-            <label
-              for="remember"
-              class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-            >
-              Remember me
-            </label>
+            <div>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+              />
+            </div>
           </div>
-          <button
-            type="submit"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Submit
-          </button>
+
+          {/* <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <input
+                  id="remember-me"
+                  name="remember-me"
+                  type="checkbox"
+                  className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                />
+                <label
+                  htmlFor="remember-me"
+                  className="ml-2 block text-sm text-gray-900"
+                >
+                  Remember me
+                </label>
+              </div>
+
+              <div className="text-sm">
+                <a
+                  href="#"
+                  className="font-medium text-indigo-600 hover:text-indigo-500"
+                >
+                  Forgot your password?
+                </a>
+              </div>
+            </div> */}
+
+          <div>
+            <button
+              className="group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              onClick={handleSubmit}
+            >
+              <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                <LockClosedIcon
+                  className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                  aria-hidden="true"
+                />
+              </span>
+              Sign in
+            </button>
+          </div>
         </div>
-      </form>
-    </section>
+      </div>
+    </>
   );
-};
+}

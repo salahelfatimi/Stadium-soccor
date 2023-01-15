@@ -1,8 +1,8 @@
 import { SiInstagram, SiWhatsapp, SiFacebook, SiTwitter } from "react-icons/si";
-import {NavLink} from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 export default () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-white dark:bg-gray-800">
       <div className="container flex flex-col items-center max-w-screen-2xl justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
         <NavLink
           to="/"
@@ -30,7 +30,7 @@ export default () => {
 
           <a
             href="#"
-            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-[#be123c] dark:hover:text-blue-400"
+            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-[#be123c] dark:hover:text-red-400"
             aria-label="Facebook"
           >
             <SiInstagram
@@ -54,7 +54,7 @@ export default () => {
 
           <a
             href="#"
-            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-blue-400"
+            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-[#10b981] dark:hover:text-green-400"
             aria-label="Github"
           >
             <SiWhatsapp

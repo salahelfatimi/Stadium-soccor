@@ -5,8 +5,10 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-     <div className="bg-white flex flex-col h-screen justify-between ">
+    <div className="dark">
+     <div className="bg-white flex flex-col min-h-screen justify-between   dark:bg-gray-800">
     <App/>
+    </div>
     </div>
   </React.StrictMode>
 );
