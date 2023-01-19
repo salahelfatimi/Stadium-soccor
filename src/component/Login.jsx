@@ -15,8 +15,9 @@ export default function Example() {
       const find = data.find((element) => {
         return element.Email === email && element.Password === password;
       });
+      const User = find === undefined ? "Error" : "C est ok"
 
-      console.log(find);
+      console.log(User);
     }
   };
 
@@ -35,7 +36,7 @@ export default function Example() {
       <div className="flex  items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
-            <img className="mx-auto h-24  " src={logodark} alt="Stadium soccor" />
+            <img className="mx-auto h-20  " src={logodark} alt="Stadium soccor" />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white ">
               Sign in to your stadium
             </h2>
