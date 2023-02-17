@@ -20,6 +20,9 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+    backgroundImage: {
+      'back-ball':"url('./src/assets/ball.png')",
+    },
     extend: {
       colors: {
         bluedarkbg: "#0B1120",

@@ -1,4 +1,4 @@
-import playground from "../image/playground.jpg";
+import playground from "../assets/playground1.jpg";
 import React from "react";
 
 export default () => {
@@ -8,29 +8,29 @@ export default () => {
   ];
 
   return (
-    <section className=" mx-auto   max-w-screen-xl rounded-lg lg:px-8  dark:bg-gray-800">
-      <div className="mt-12 lg:space-x-28 grid gap-2  sm:grid-cols-1 lg:grid-cols-2">
-        {Pricing.map((items, key) => (
-          <div  key={key} className="max-w-sm  bg-white border  border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-          
-              <img className="rounded-t-lg" src={items.image} alt="" />
-            
-            <div className="p-5">
-              
-                <h5 className="mb-12 text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
+    <main className="    rounded-lg  ">
+      <div className="  grid   gap-2 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2">
+        {Pricing.map((items, i) => (
+          <div className="flex justify-evenly px-4 py-4 " key={i}>
+            <div className="max-w-sm  text-[#FEFAF1]  bg-[#1e1f23] rounded-2xl shadow-md">
+              <img className=" rounded-t-2xl" src={items.image} alt="" />
+
+              <div className="p-5">
+                <h5 className="mb-12 text-2xl font-bold tracking-tight text-center ">
                   {items.persone} VS {items.persone}
                 </h5>
-              
-              <p className="mb-6 font-semibold text-xl text-center text-gray-700 dark:text-gray-400">
-                {items.prix} DH per person one
-              </p>
-              <p className="mb-6 font-semibold text-xl text-center text-gray-700 dark:text-gray-400">
-                Total {items.total}
-              </p>
+
+                <p className="mb-6 font-semibold text-xl text-center ">
+                  {items.prix} DH per person one
+                </p>
+                <p className="mb-6 font-semibold text-xl text-center ">
+                  Total {items.total}
+                </p>
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </section>
+    </main>
   );
 };
