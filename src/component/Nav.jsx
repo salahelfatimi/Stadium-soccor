@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import logo from "../assets/logo.svg";
@@ -21,6 +21,7 @@ export default function Nav() {
     textDecorationThickness: "4px",
     transitionDuration: "700ms",
   };
+ 
 
   return (
     <div>
