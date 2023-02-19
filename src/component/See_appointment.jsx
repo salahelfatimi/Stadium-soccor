@@ -6,7 +6,7 @@ export default () => {
   const [hours, setHours] = useState([]);
   const stadium = [
     { id: 2, image: playground, capacity: 5 },
-    { id: 3, image: playground, capacity: 5 },
+  
     { id: 1, image: playground, capacity: 7 },
   ];
   const handelsubmit = (e) => {
@@ -50,25 +50,25 @@ export default () => {
               />
             </div>
 
-            <div class="relative overflow-x-auto rounded-3xl">
-              <table class="w-full text-sm text-left text-gray-500">
-                <thead class="text-xs text-[#FFFFFF] uppercase bg-[#26272B]">
+            <div className="relative overflow-x-auto rounded-3xl">
+              <table className="w-full text-sm text-left text-gray-500">
+                <thead className="text-xs text-[#FFFFFF] uppercase bg-[#26272B]">
                   <tr>
-                    <th scope="col" class="px-6 py-3">
+                    <th scope="col" className="px-6 py-3">
                       Time
                     </th>
-                    <th scope="col" class="px-6 py-3">
+                    <th scope="col" className="px-6 py-3">
                       Reservation
                     </th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="bg-[#56575B]">
+                  <tr className="bg-[#56575B]">
                     <th
                       scope="row"
-                      class="px-6 py-4 font-medium text-[#FFFFFF] whitespace-nowrap "
+                      className="px-6 py-4 font-medium text-[#FFFFFF] whitespace-nowrap "
                     ></th>
-                    <td class="px-6 py-4 text-[#FFFFFF]">Silver</td>
+                    <td className="px-6 py-4 text-[#FFFFFF]">Silver</td>
                   </tr>
                 </tbody>
               </table>
