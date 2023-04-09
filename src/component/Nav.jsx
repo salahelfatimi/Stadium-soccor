@@ -13,6 +13,16 @@ export default function Nav() {
     { name: "About", href: "/About" },
   ];
 
+  React.useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+  const handleClickOutside = (event) => {
+    setShowSidebar(false);
+  };
+
   let activeStyle = {
     textDecoration: " underline",
     textDecorationColor: "#68FE9A",
@@ -21,7 +31,6 @@ export default function Nav() {
     textDecorationThickness: "4px",
     transitionDuration: "700ms",
   };
- 
 
   return (
     <div>
