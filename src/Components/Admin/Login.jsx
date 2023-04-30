@@ -1,36 +1,12 @@
 import { LockClosedIcon } from "@heroicons/react/20/solid";
 import { React, useEffect, useState } from "react";
-import logodark from "../assets/default.svg";
+import logodark from "../../assets/default.svg";
 export default function Example() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
-  const [data, setData] = useState([]);
 
-  const handleSubmit = () => {
-    if (user.length === 0) {
-      alert("Email invalid");
-    } else if (password.length === 0) {
-      alert("Password invalid");
-    } else {
-      const find = data.find((element) => {
-        return element.Email === user && element.Password === password;
-      });
-      const User = find === undefined ? "Error" : "C est ok";
+  const handleSubmit = () => {};
 
-      console.log(User);
-    }
-  };
-
-  useEffect(() => {
-    function Fetch() {
-      fetch("http://localhost/Stadium%20soccor/Login.php")
-        .then((response) => response.json())
-        .then((json) => {
-          setData(json);
-        });
-    }
-    Fetch();
-  });
   return (
     <>
       <div className="flex  items-center justify-center  py-12 px-4 sm:px-6 lg:px-8">

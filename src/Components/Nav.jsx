@@ -91,7 +91,7 @@ export default function Nav() {
               {navigation.map((ele, i) => (
                 <NavLink
                   to={ele.href}
-                  onClick={() => setShowSidebar(!showSidebar)}
+                  onClick={() => setShowSidebar(false)}
                   key={i}
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}
                   className=" grid justify-items-center text-[#6a6b70] hover:text-[#FEFAF1] hover:underline hover:decoration-[#68FE9A]  duration-700 hover:duration-700 underline-offset-8 decoration-4   px-6 py-2 "

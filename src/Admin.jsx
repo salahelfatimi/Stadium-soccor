@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Login from "./component/Login";
+import Login from "./Components/Admin/Login";
 
 export default () => {
   return (

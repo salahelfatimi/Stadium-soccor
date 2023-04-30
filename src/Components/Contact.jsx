@@ -37,14 +37,14 @@ export default () => {
         {Contact.map((ele, i) => (
           <div key={i} className="flex  justify-around p-2">
             <a href={ele.href} target="_blank">
-              <div className="flex flex-col justify-between rounded-3xl gap-y-10 text-[#FEFAF1] hover:border-4 hover:border-[#68FE9A]  hover:duration-200  bg-[#1e1f23] px-20  py-12 mb-8">
+              <div className="flex flex-col justify-between rounded-3xl gap-y-10 text-[#FEFAF1] hover:border-2 hover:border-[#68FE9A]  hover:duration-200  bg-[#1e1f23] px-16  py-12 mb-8">
                 <div className="pb-10 flex justify-center">
-                  <img src={ele.icon} alt={ele.Name} className="w-44" />
+                  <img src={ele.icon} alt={ele.Name} className=" w-2/4" />
                 </div>
-                <div className="text-center capitalize font-mono font-extrabold  text-xl ">
+                <div className="text-center capitalize font-mono font-bold  text-lg">
                   <h1>{ele.Name}</h1>
                 </div>
-                <div className="text-center capitalize font-mono font-medium   ">
+                <div className="text-center capitalize font-sans ">
                   <span>{ele.donne}</span>
                 </div>
               </div>

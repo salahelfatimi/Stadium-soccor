@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Nav from "./component/Nav";
-import See_appointment from "./component/See_appointment";
-import Contact from "./component/Contact";
-import About from "./component/About";
-import Saction from "./component/Saction";
-import Pricing from "./component/Pricing";
+import Nav from "./Components/Nav";
+import See_appointment from "./Components/See_appointment";
+import Contact from "./Components/Contact";
+import About from "./Components/About";
+import Saction from "./Components/Saction";
+import Pricing from "./Components/Pricing";
 
-import Footers from "./component/Footers";
+import Footers from "./Components/Footers";
 export default () => {
   return (
     <div>
