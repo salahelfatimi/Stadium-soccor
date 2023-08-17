@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import playground from "../assets/playground.jpg";
+import playground from "../assets/Playground.jpg";
 export default () => {
   const [idchoose, setIdchoose] = useState("");
   const [times, setTimes] = useState([]);
