@@ -1,5 +1,3 @@
-import playground from "../assets/playground.png";
-import ball from "../assets/ball.png";
 import { NavLink } from "react-router-dom";
 export default () => {
   return (
@@ -37,7 +35,7 @@ export default () => {
           </NavLink>
         </div>
         <div className="flex-1 mt-8 md:mt-4  mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
-          <img src={playground} alt="" className="w-full" />
+          <img src="playground.png" alt="" className="w-full" />
         </div>
       </div>
     </section>

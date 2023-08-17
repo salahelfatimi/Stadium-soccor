@@ -12,7 +12,11 @@ export default () => {
         </NavLink>
 
         <p className="text-sm text-center  text-[#FEFAF1]">
-          © Copyright 2022.All Rights Reserved.
+          Copyright &copy;{new Date().getFullYear()} All rights reserved |
+              This projet is made with by
+              <a className="pl-1" href="#" target="_blank">
+                salah.fatimi
+              </a>
         </p>
 
         <div className="flex -mx-2">

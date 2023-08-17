@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import logo from "../assets/logo.svg";
-import menu from "../assets/list.png";
+
 
 export default function Nav() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -38,7 +37,7 @@ export default function Nav() {
       <header className="sticky top-0 z-50 p-6 bg-[#060606] rounded-b-3xl shadow-2xl hidden md:block">
         <div className="flex justify-between">
           <div className="flex items-center">
-            <img src={logo} alt="" className="w-44" />
+            <img src="logo.svg" alt="" className="w-44" />
           </div>
           <div>
             <div>
@@ -65,11 +64,11 @@ export default function Nav() {
       >
         <div className="flex justify-between items-center">
           <div>
-            <img src={logo} className="w-44" />
+            <img src="logo.svg" className="w-44" />
           </div>
           <button>
             <img
-              src={menu}
+              src="list.png"
               alt=""
               className="w-9"
               onClick={() => setShowSidebar(!showSidebar)}
@@ -84,7 +83,7 @@ export default function Nav() {
       >
         <div className="grid place-items-center">
           <div className="flex items-center">
-            <img src={logo} alt="" className="w-44" />
+            <img src="logo.svg" alt="" className="w-44" />
           </div>
           <div>
             <div className="pt-8">

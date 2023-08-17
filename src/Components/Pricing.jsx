@@ -1,10 +1,9 @@
-import playground from "../assets/playground1.jpg";
 import React from "react";
 
 export default () => {
   const Pricing = [
-    { image: playground, persone: "7", prix: "25", total: "350" },
-    { image: playground, persone: "5", prix: "25", total: "250" },
+    { image: "playground1.jpg", persone: "7", prix: "25", total: "350" },
+    { image: "playground1.jpg", persone: "5", prix: "25", total: "250" },
   ];
 
   return (

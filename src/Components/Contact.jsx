@@ -1,33 +1,30 @@
 import React from "react";
-import phone from "../assets/phone.png";
-import phone_office from "../assets/telephone-office.png";
-import gps from "../assets/gps.png";
-import Whatsapp from "../assets/Whatsapp.png";
+
 
 export default () => {
   const Contact = [
     {
       Name: "stadium location",
       donne: "Syba marrakech",
-      icon: gps,
+      icon: "gps.png",
       href: "https://maps.app.goo.gl/ymQhQkMH3H6GUWir7",
     },
     {
       Name: "Phone",
       donne: "0602314804",
-      icon: phone,
+      icon: "phone.png",
       href: "tel:+212602314804",
     },
     {
       Name: "Whatsapp",
       donne: "0602314804",
-      icon: Whatsapp,
+      icon: "Whatsapp.png",
       href: "https://wa.me/212602314804",
     },
     {
       Name: "Phone Office",
       donne: "0502314804",
-      icon: phone_office,
+      icon: "telephone-office.png",
       href: "tel:+212502314804",
     },
   ];

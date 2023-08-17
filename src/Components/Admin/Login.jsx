@@ -1,6 +1,5 @@
 import { LockClosedIcon } from "@heroicons/react/20/solid";
-import { React, useEffect, useState } from "react";
-import logodark from "../../assets/default.svg";
+import { React, useState } from "react";
 export default function Example() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +13,7 @@ export default function Example() {
           <div>
             <img
               className="mx-auto h-20  "
-              src={logodark}
+              src="default.svg"
               alt="Stadium soccor"
             />
             <h2 className="mt-6 text-center text-2xl font-semibold font-mono  text-[#FEFAF1] ">

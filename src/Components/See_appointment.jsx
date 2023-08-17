@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import playground from "../assets/Playground.jpg";
 export default () => {
   const [idchoose, setIdchoose] = useState("");
   const [times, setTimes] = useState([]);
   const [date, setDate] = useState([]);
   const [showReser, setShowReser] = useState(false);
   const stadium = [
-    { id: 5, image: playground, capacity: 5 },
+    { id: 5, image: "Playground.jpg", capacity: 5 },
 
-    { id: 7, image: playground, capacity: 7 },
+    { id: 7, image: "Playground.jpg", capacity: 7 },
   ];
 
   const generateTimes = (e) => {
