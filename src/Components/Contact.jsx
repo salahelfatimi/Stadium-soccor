@@ -8,7 +8,8 @@ export default () => {
       donne: "Syba marrakech",
       icon: "gps.png",
       href: "https://maps.app.goo.gl/ymQhQkMH3H6GUWir7",
-    },
+    }, 
+    
     {
       Name: "Phone",
       donne: "0602314804",
