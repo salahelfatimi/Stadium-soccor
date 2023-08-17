@@ -12,7 +12,7 @@ export default () => {
         {Pricing.map((items, i) => (
           <div className="flex  justify-around  px-4 py-4 " key={i}>
             <div className="max-w-sm  text-[#FEFAF1]  bg-[#1e1f23] rounded-2xl shadow-md">
-              <img className="   rounded-t-2xl" src={items.image} alt="" />
+              <img className="   rounded-t-2xl" src="playground1.jpg" alt="" />
 
               <div className="p-5">
                 <h5 className="mb-8 text-2xl font-bold tracking-tight text-center ">
